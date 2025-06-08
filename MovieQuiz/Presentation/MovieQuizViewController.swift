@@ -5,14 +5,11 @@ import Foundation
 
 
 final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate {
-    
+    private var statisticService: StatisticServiceProtocol!
     
     
     @IBOutlet private weak var noButton: UIButton!
     @IBOutlet private weak var yesButton: UIButton!
-    
-    
-    
     @IBOutlet private var imageView: UIImageView!
     @IBOutlet private var textLable: UILabel!
     @IBOutlet private var counterLable: UILabel!
@@ -21,16 +18,18 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate {
     
     
     private var currentQuestionIndex = 0
-    
     private var correctAnswers = 0
     private let questionsAmount: Int = 10
-    private var questionFactory: QuestionFactoryProtocol = QuestionFactory()
+    private var questionFactory: QuestionFactoryProtocol!
     private var currentQuestion: QuizQuestion?
+   
     
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        statisticService = StatisticServiceImplementation()
         
         noButton.layer.cornerRadius = 15
         yesButton.layer.cornerRadius = 15
@@ -38,10 +37,8 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate {
         imageView.layer.cornerRadius = 20
         imageView.clipsToBounds = true
         
-        let questionFactory = QuestionFactory()
+        questionFactory = QuestionFactory()
         questionFactory.delegate = self
-        self.questionFactory = questionFactory
-        
         questionFactory.requestNextQuestion()
     }
     
@@ -70,10 +67,8 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate {
         imageView.layer.borderColor = isCorrect ? UIColor.ypGreen.cgColor : UIColor.ypRed.cgColor
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-            
             self.imageView.layer.borderWidth = 0
             self.imageView.layer.borderColor = UIColor.clear.cgColor
-            
             self.showNextQuestionOrResults()
         }
     }
@@ -106,12 +101,11 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate {
     
     
     private func convert(model: QuizQuestion) -> QuizStepViewModel {
-        let questionStep = QuizStepViewModel(
+        return QuizStepViewModel(
             image: UIImage(named: model.image) ?? UIImage(),
             question: model.text,
             questionNumber: "\(currentQuestionIndex + 1)/\(questionsAmount)"
         )
-        return questionStep
     }
     
     private func show(quiz step: QuizStepViewModel) {
@@ -134,25 +128,27 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate {
     
     
     private func displayQuizResults() {
-        let text = correctAnswers == questionsAmount ?
-        "Поздравляем, вы ответили на 10 из 10!" :
-        "Вы ответили на \(correctAnswers) из 10, попробуйте ещё раз!"
+        statisticService.store(correct: correctAnswers, total: questionsAmount)
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy HH:mm"
+        let formattedDate = dateFormatter.string(from: statisticService.bestGame.date)
+        
+        let currentGameResult = "Ваш результат: \(correctAnswers) из \(questionsAmount)"
+        let totalGamesCount = "Количество сыграных квизов: \(statisticService.gamesCount)"
+        let bestGameResult = "Рекорд: \(statisticService.bestGame.correct) из \(statisticService.bestGame.total) (\(formattedDate))"
+        let averageAccuracy = String(format: "Средняя точность: %.2f%%", statisticService.totalAccuracy)
+        let alertMessage = [currentGameResult, totalGamesCount, bestGameResult, averageAccuracy].joined(separator: "\n")
         
         
-        let alertModel = AlertModel(
-            title: "Этот раунд окончен!",
-            message: text,
-            buttonText: "Начать заново",
-            completion: { [weak self] in
+        let alert = UIAlertController(title: "Этот раунд окончен!", message: alertMessage, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Начать заново", style: .default, handler: { [weak self] _ in
                 self?.currentQuestionIndex = 0
                 self?.correctAnswers = 0
                 self?.questionFactory.requestNextQuestion()
-            }
-        )
+            }))
         
-        let alertPresenter = AlertPresenter(viewController: self)
-        alertPresenter.showAlert(with: alertModel)
+        present(alert, animated: true)
     }
-    
 }
 

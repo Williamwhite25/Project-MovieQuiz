@@ -26,6 +26,9 @@
 		FE5C5F7D2DEDC1BF00BAB884 /* AlertModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C5F7C2DEDC1B400BAB884 /* AlertModel.swift */; };
 		FEB4F89D2DC9C4090081F34F /* YS Display-Bold 5.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEB4F89B2DC9C4090081F34F /* YS Display-Bold 5.ttf */; };
 		FEB4F89E2DC9C4090081F34F /* YS Display-Medium 6.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEB4F89C2DC9C4090081F34F /* YS Display-Medium 6.ttf */; };
+		FEDD85CA2DF3327500C8C538 /* StatisticServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDD85C92DF3326E00C8C538 /* StatisticServiceProtocol.swift */; };
+		FEDD85CC2DF54E2000C8C538 /* GameRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDD85CB2DF54E1A00C8C538 /* GameRecord.swift */; };
+		FEDD85CF2DF5589700C8C538 /* StatisticServiceImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDD85CE2DF5589400C8C538 /* StatisticServiceImplementation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,9 @@
 		FE5C5F7C2DEDC1B400BAB884 /* AlertModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertModel.swift; sourceTree = "<group>"; };
 		FEB4F89B2DC9C4090081F34F /* YS Display-Bold 5.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YS Display-Bold 5.ttf"; sourceTree = "<group>"; };
 		FEB4F89C2DC9C4090081F34F /* YS Display-Medium 6.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YS Display-Medium 6.ttf"; sourceTree = "<group>"; };
+		FEDD85C92DF3326E00C8C538 /* StatisticServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticServiceProtocol.swift; sourceTree = "<group>"; };
+		FEDD85CB2DF54E1A00C8C538 /* GameRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRecord.swift; sourceTree = "<group>"; };
+		FEDD85CE2DF5589400C8C538 /* StatisticServiceImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticServiceImplementation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,7 @@
 		611342392B701CF6003FC2A4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FEDD85CB2DF54E1A00C8C538 /* GameRecord.swift */,
 				FE5C5F7C2DEDC1B400BAB884 /* AlertModel.swift */,
 				FE5C5F702DEBFBCE00BAB884 /* QuizQuestion.swift */,
 				FE5C5F6E2DEBFBBA00BAB884 /* QuizResultsViewModel.swift */,
@@ -139,6 +146,8 @@
 		FE5C5F662DE9CA3C00BAB884 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				FEDD85CE2DF5589400C8C538 /* StatisticServiceImplementation.swift */,
+				FEDD85C92DF3326E00C8C538 /* StatisticServiceProtocol.swift */,
 				FE5C5F742DEC97FB00BAB884 /* QuestionFactoryDelegate.swift */,
 				FE5C5F722DEC7C5C00BAB884 /* QuestionFactoryProtocol.swift */,
 				FE5C5F692DE9CAD000BAB884 /* QuestionFactory.swift */,
@@ -224,11 +233,14 @@
 				AD7AFA552836189F00399704 /* Array+Extensions.swift in Sources */,
 				FE5C5F732DEC7C6000BAB884 /* QuestionFactoryProtocol.swift in Sources */,
 				FE5C5F752DEC97FE00BAB884 /* QuestionFactoryDelegate.swift in Sources */,
+				FEDD85CC2DF54E2000C8C538 /* GameRecord.swift in Sources */,
 				FE5C5F7D2DEDC1BF00BAB884 /* AlertModel.swift in Sources */,
 				AD1ABAB62831907B00B3E448 /* MovieQuizViewController.swift in Sources */,
 				FE5C5F6D2DEBFBA400BAB884 /* QuizStepViewModel.swift in Sources */,
 				FE5C5F712DEBFBD200BAB884 /* QuizQuestion.swift in Sources */,
 				FE5C5F792DEDB3D800BAB884 /* AlertPresenter.swift in Sources */,
+				FEDD85CA2DF3327500C8C538 /* StatisticServiceProtocol.swift in Sources */,
+				FEDD85CF2DF5589700C8C538 /* StatisticServiceImplementation.swift in Sources */,
 				FE5C5F6A2DE9CAD500BAB884 /* QuestionFactory.swift in Sources */,
 				AD77F5742857F8810062FB14 /* Date+Extensions.swift in Sources */,
 				AD1ABAB22831907B00B3E448 /* AppDelegate.swift in Sources */,
