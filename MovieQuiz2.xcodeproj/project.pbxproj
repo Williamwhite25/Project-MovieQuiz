@@ -24,11 +24,11 @@
 		FE5C5F752DEC97FE00BAB884 /* QuestionFactoryDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C5F742DEC97FB00BAB884 /* QuestionFactoryDelegate.swift */; };
 		FE5C5F792DEDB3D800BAB884 /* AlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C5F782DEDB3D200BAB884 /* AlertPresenter.swift */; };
 		FE5C5F7D2DEDC1BF00BAB884 /* AlertModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C5F7C2DEDC1B400BAB884 /* AlertModel.swift */; };
-		FEB4F89D2DC9C4090081F34F /* YS Display-Bold 5.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEB4F89B2DC9C4090081F34F /* YS Display-Bold 5.ttf */; };
-		FEB4F89E2DC9C4090081F34F /* YS Display-Medium 6.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEB4F89C2DC9C4090081F34F /* YS Display-Medium 6.ttf */; };
 		FEDD85CA2DF3327500C8C538 /* StatisticServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDD85C92DF3326E00C8C538 /* StatisticServiceProtocol.swift */; };
 		FEDD85CC2DF54E2000C8C538 /* GameRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDD85CB2DF54E1A00C8C538 /* GameRecord.swift */; };
 		FEDD85CF2DF5589700C8C538 /* StatisticServiceImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDD85CE2DF5589400C8C538 /* StatisticServiceImplementation.swift */; };
+		FEDD860F2DF7F5A100C8C538 /* YS Display-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEDD860D2DF7F5A100C8C538 /* YS Display-Bold.ttf */; };
+		FEDD86102DF7F5A100C8C538 /* YS Display-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEDD860E2DF7F5A100C8C538 /* YS Display-Medium.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,11 +51,11 @@
 		FE5C5F742DEC97FB00BAB884 /* QuestionFactoryDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionFactoryDelegate.swift; sourceTree = "<group>"; };
 		FE5C5F782DEDB3D200BAB884 /* AlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenter.swift; sourceTree = "<group>"; };
 		FE5C5F7C2DEDC1B400BAB884 /* AlertModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertModel.swift; sourceTree = "<group>"; };
-		FEB4F89B2DC9C4090081F34F /* YS Display-Bold 5.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YS Display-Bold 5.ttf"; sourceTree = "<group>"; };
-		FEB4F89C2DC9C4090081F34F /* YS Display-Medium 6.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YS Display-Medium 6.ttf"; sourceTree = "<group>"; };
 		FEDD85C92DF3326E00C8C538 /* StatisticServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticServiceProtocol.swift; sourceTree = "<group>"; };
 		FEDD85CB2DF54E1A00C8C538 /* GameRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRecord.swift; sourceTree = "<group>"; };
 		FEDD85CE2DF5589400C8C538 /* StatisticServiceImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticServiceImplementation.swift; sourceTree = "<group>"; };
+		FEDD860D2DF7F5A100C8C538 /* YS Display-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YS Display-Bold.ttf"; sourceTree = "<group>"; };
+		FEDD860E2DF7F5A100C8C538 /* YS Display-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YS Display-Medium.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +94,8 @@
 		8F4738332848DE46005DF65E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				FEB4F89B2DC9C4090081F34F /* YS Display-Bold 5.ttf */,
-				FEB4F89C2DC9C4090081F34F /* YS Display-Medium 6.ttf */,
+				FEDD860D2DF7F5A100C8C538 /* YS Display-Bold.ttf */,
+				FEDD860E2DF7F5A100C8C538 /* YS Display-Medium.ttf */,
 				AD1ABABC2831907F00B3E448 /* LaunchScreen.storyboard */,
 				AD1ABABA2831907F00B3E448 /* Assets.xcassets */,
 				AD1ABABF2831907F00B3E448 /* Info.plist */,
@@ -214,11 +214,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEDD860F2DF7F5A100C8C538 /* YS Display-Bold.ttf in Resources */,
+				FEDD86102DF7F5A100C8C538 /* YS Display-Medium.ttf in Resources */,
 				AD1ABABE2831907F00B3E448 /* LaunchScreen.storyboard in Resources */,
 				AD1ABABB2831907F00B3E448 /* Assets.xcassets in Resources */,
 				AD1ABAB92831907B00B3E448 /* Main.storyboard in Resources */,
-				FEB4F89D2DC9C4090081F34F /* YS Display-Bold 5.ttf in Resources */,
-				FEB4F89E2DC9C4090081F34F /* YS Display-Medium 6.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

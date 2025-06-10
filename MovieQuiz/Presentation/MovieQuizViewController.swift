@@ -29,6 +29,11 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        textLable.font = UIFont(name: "YPDisplay-Bold", size: 23)
+        counterLable.font = UIFont(name: "YPDisplay-Medium", size: 20)
+        yesButton.titleLabel?.font = UIFont(name: "YPDisplay-Medium", size: 20)
+        noButton.titleLabel?.font = UIFont(name: "YPDisplay-Medium", size: 20)
+        
         statisticService = StatisticServiceImplementation()
         
         noButton.layer.cornerRadius = 15
