@@ -9,6 +9,6 @@
 
 protocol QuestionFactoryProtocol {
     var delegate: QuestionFactoryDelegate? { get set }
-    func setup(delegate: QuestionFactoryDelegate)
     func requestNextQuestion()
+    func loadData()
 }
