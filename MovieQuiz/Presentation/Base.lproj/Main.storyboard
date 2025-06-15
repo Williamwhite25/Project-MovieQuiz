@@ -126,15 +126,20 @@
                                     <constraint firstItem="sE1-FL-RP3" firstAttribute="top" secondItem="njx-zf-bOr" secondAttribute="bottom" constant="20" id="RCL-yc-3gP"/>
                                 </constraints>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="cgm-mo-1Z7">
+                                <rect key="frame" x="185" y="412" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="YP Black"/>
                         <constraints>
+                            <constraint firstItem="cgm-mo-1Z7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BBp-5k-0d5"/>
                             <constraint firstItem="ARq-lF-LJa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="Df8-Rh-w9O"/>
                             <constraint firstItem="ARq-lF-LJa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="HyE-N9-cTJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pHz-hP-HJI" secondAttribute="trailing" constant="20" id="KA9-cA-Yhf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ARq-lF-LJa" secondAttribute="bottom" id="M7f-08-nbX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="njx-zf-bOr" secondAttribute="trailing" constant="20" id="MEt-sV-nGX"/>
+                            <constraint firstItem="cgm-mo-1Z7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="NAq-fw-7Dt"/>
                             <constraint firstItem="XfY-Oz-60X" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="QLt-lP-2uG"/>
                             <constraint firstItem="XfY-Oz-60X" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="VzL-2h-AwA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pHz-hP-HJI" secondAttribute="bottom" id="WE4-fe-hSH"/>
@@ -148,6 +153,7 @@
                     <connections>
                         <outlet property="NoButton" destination="9PT-hG-ANc" id="uEs-3J-wvN"/>
                         <outlet property="YesButton" destination="hbj-cE-F2D" id="s2u-Pl-Atx"/>
+                        <outlet property="activityIndicator" destination="cgm-mo-1Z7" id="pP2-G2-lYZ"/>
                         <outlet property="counterLable" destination="S8c-bC-3CT" id="91G-tm-h4Z"/>
                         <outlet property="imageView" destination="njx-zf-bOr" id="iad-0Y-i7m"/>
                         <outlet property="textLable" destination="sE1-FL-RP3" id="Z9O-sV-nZh"/>
